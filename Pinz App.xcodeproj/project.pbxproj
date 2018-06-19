@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4182244720D6CAE500B3B0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244620D6CAE500B3B0F6 /* AppDelegate.swift */; };
-		4182244920D6CAE500B3B0F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244820D6CAE500B3B0F6 /* ViewController.swift */; };
+		4182244920D6CAE500B3B0F6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244820D6CAE500B3B0F6 /* LogInViewController.swift */; };
 		4182244C20D6CAE500B3B0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4182244A20D6CAE500B3B0F6 /* Main.storyboard */; };
 		4182244E20D6CAE700B3B0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4182244D20D6CAE700B3B0F6 /* Assets.xcassets */; };
 		4182245120D6CAE700B3B0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4182244F20D6CAE700B3B0F6 /* LaunchScreen.storyboard */; };
+		4182245920D6CB0D00B3B0F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4182245820D6CB0D00B3B0F6 /* GoogleService-Info.plist */; };
+		7BEA460EFB65B5EA58FEA677 /* Pods_Pinz_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880506CD05BB41F5DACEB9DA /* Pods_Pinz_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30CD8330D250CA88A2CC3C61 /* Pods-Pinz App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinz App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App.release.xcconfig"; sourceTree = "<group>"; };
 		4182244320D6CAE500B3B0F6 /* Pinz App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinz App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4182244620D6CAE500B3B0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4182244820D6CAE500B3B0F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4182244820D6CAE500B3B0F6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4182244B20D6CAE500B3B0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4182244D20D6CAE700B3B0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4182245020D6CAE700B3B0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4182245220D6CAE700B3B0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4182245820D6CB0D00B3B0F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		880506CD05BB41F5DACEB9DA /* Pods_Pinz_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinz_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2532A53C6BDCAD54C6649E /* Pods-Pinz App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinz App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEA460EFB65B5EA58FEA677 /* Pods_Pinz_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		339A7547F00C28EA0B2C51BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE2532A53C6BDCAD54C6649E /* Pods-Pinz App.debug.xcconfig */,
+				30CD8330D250CA88A2CC3C61 /* Pods-Pinz App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3469B5B2DFCB71D0B5ECA4E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880506CD05BB41F5DACEB9DA /* Pods_Pinz_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4182243A20D6CAE500B3B0F6 = {
 			isa = PBXGroup;
 			children = (
 				4182244520D6CAE500B3B0F6 /* Pinz App */,
 				4182244420D6CAE500B3B0F6 /* Products */,
+				339A7547F00C28EA0B2C51BB /* Pods */,
+				3469B5B2DFCB71D0B5ECA4E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,10 +81,11 @@
 			isa = PBXGroup;
 			children = (
 				4182244620D6CAE500B3B0F6 /* AppDelegate.swift */,
-				4182244820D6CAE500B3B0F6 /* ViewController.swift */,
+				4182244820D6CAE500B3B0F6 /* LogInViewController.swift */,
 				4182244A20D6CAE500B3B0F6 /* Main.storyboard */,
 				4182244D20D6CAE700B3B0F6 /* Assets.xcassets */,
 				4182244F20D6CAE700B3B0F6 /* LaunchScreen.storyboard */,
+				4182245820D6CB0D00B3B0F6 /* GoogleService-Info.plist */,
 				4182245220D6CAE700B3B0F6 /* Info.plist */,
 			);
 			path = "Pinz App";
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4182245520D6CAE700B3B0F6 /* Build configuration list for PBXNativeTarget "Pinz App" */;
 			buildPhases = (
+				AD4CA852A6D4DDA8279D536A /* [CP] Check Pods Manifest.lock */,
 				4182243F20D6CAE500B3B0F6 /* Sources */,
 				4182244020D6CAE500B3B0F6 /* Frameworks */,
 				4182244120D6CAE500B3B0F6 /* Resources */,
+				A840E0C317547297BA4615F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4182245120D6CAE700B3B0F6 /* LaunchScreen.storyboard in Resources */,
+				4182245920D6CB0D00B3B0F6 /* GoogleService-Info.plist in Resources */,
 				4182244E20D6CAE700B3B0F6 /* Assets.xcassets in Resources */,
 				4182244C20D6CAE500B3B0F6 /* Main.storyboard in Resources */,
 			);
@@ -130,12 +160,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A840E0C317547297BA4615F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD4CA852A6D4DDA8279D536A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pinz App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4182243F20D6CAE500B3B0F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4182244920D6CAE500B3B0F6 /* ViewController.swift in Sources */,
+				4182244920D6CAE500B3B0F6 /* LogInViewController.swift in Sources */,
 				4182244720D6CAE500B3B0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +351,7 @@
 		};
 		4182245620D6CAE700B3B0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE2532A53C6BDCAD54C6649E /* Pods-Pinz App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +369,7 @@
 		};
 		4182245720D6CAE700B3B0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30CD8330D250CA88A2CC3C61 /* Pods-Pinz App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
