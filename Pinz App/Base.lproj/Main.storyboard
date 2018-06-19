@@ -114,39 +114,62 @@
                         <outlet property="signInButton" destination="Lam-jI-a6y" id="bUb-eq-55S"/>
                         <outlet property="signInLabel" destination="p5m-AI-7Pm" id="hoM-tH-Wjl"/>
                         <outlet property="signInSelector" destination="pzp-Cu-gCN" id="nnJ-cf-XfZ"/>
-                        <segue destination="MBS-Kf-JVd" kind="show" identifier="goToHome" id="85B-fd-fTq"/>
+                        <segue destination="bSM-Eb-amh" kind="show" identifier="goToHome" id="SOE-gR-3nu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113" y="123"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QWb-Es-8zX">
+        <!--List-->
+        <scene sceneID="Fm6-Rr-8rF">
             <objects>
-                <viewController id="MBS-Kf-JVd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VEx-m1-3ex">
+                <viewController id="quA-kr-JnY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TNv-Mc-qIE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're In!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9r-2Z-CYa">
-                                <rect key="frame" x="152" y="323" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.65098039215686276" green="0.82352941176470584" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="g9r-2Z-CYa" firstAttribute="centerY" secondItem="VEx-m1-3ex" secondAttribute="centerY" id="Arl-v8-a2w"/>
-                            <constraint firstItem="g9r-2Z-CYa" firstAttribute="centerX" secondItem="VEx-m1-3ex" secondAttribute="centerX" id="fWe-vg-Zl5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ntp-c7-dSY"/>
+                        <color key="backgroundColor" red="1" green="0.67371786629999997" blue="0.1821721278" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="5SE-di-qAV"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="List" id="wLp-9k-M8I"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Rk-8c-H0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xw4-5y-H6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="123"/>
+            <point key="canvasLocation" x="1441" y="1365"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="K8g-a4-lv3">
+            <objects>
+                <viewController id="vWc-nO-hJT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m0y-Rf-1EV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="om6-Dc-tOH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="dad-vd-i4g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yVd-GT-zQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="627"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="d6g-Cv-NMI">
+            <objects>
+                <tabBarController id="bSM-Eb-amh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jQt-Ae-5rh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vWc-nO-hJT" kind="relationship" relationship="viewControllers" id="a5H-0f-dRG"/>
+                        <segue destination="quA-kr-JnY" kind="relationship" relationship="viewControllers" id="B00-aU-3VP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3o-56-ynA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="876"/>
         </scene>
     </scenes>
 </document>
