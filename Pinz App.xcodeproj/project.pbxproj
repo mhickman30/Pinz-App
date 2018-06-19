@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41147AC920D8B48200F9C111 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41147AC820D8B48200F9C111 /* MapViewController.swift */; };
 		4182244720D6CAE500B3B0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244620D6CAE500B3B0F6 /* AppDelegate.swift */; };
 		4182244920D6CAE500B3B0F6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244820D6CAE500B3B0F6 /* LogInViewController.swift */; };
 		4182244C20D6CAE500B3B0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4182244A20D6CAE500B3B0F6 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		30CD8330D250CA88A2CC3C61 /* Pods-Pinz App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinz App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App.release.xcconfig"; sourceTree = "<group>"; };
+		41147AC820D8B48200F9C111 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4182244320D6CAE500B3B0F6 /* Pinz App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinz App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4182244620D6CAE500B3B0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4182244820D6CAE500B3B0F6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		41147ACA20D8B48B00F9C111 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4182244820D6CAE500B3B0F6 /* LogInViewController.swift */,
+				41147AC820D8B48200F9C111 /* MapViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		4182243A20D6CAE500B3B0F6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				4182244620D6CAE500B3B0F6 /* AppDelegate.swift */,
-				4182244820D6CAE500B3B0F6 /* LogInViewController.swift */,
 				4182244A20D6CAE500B3B0F6 /* Main.storyboard */,
+				41147ACA20D8B48B00F9C111 /* View Controllers */,
 				4182244D20D6CAE700B3B0F6 /* Assets.xcassets */,
 				4182244F20D6CAE700B3B0F6 /* LaunchScreen.storyboard */,
 				4182245820D6CB0D00B3B0F6 /* GoogleService-Info.plist */,
@@ -103,6 +114,7 @@
 				4182244020D6CAE500B3B0F6 /* Frameworks */,
 				4182244120D6CAE500B3B0F6 /* Resources */,
 				A840E0C317547297BA4615F6 /* [CP] Embed Pods Frameworks */,
+				DCA8B83D3CAFE497A7A7984A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +213,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DCA8B83D3CAFE497A7A7984A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pinz App/Pods-Pinz App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4182244920D6CAE500B3B0F6 /* LogInViewController.swift in Sources */,
+				41147AC920D8B48200F9C111 /* MapViewController.swift in Sources */,
 				4182244720D6CAE500B3B0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
