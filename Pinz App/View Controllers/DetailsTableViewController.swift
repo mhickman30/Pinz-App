@@ -1,23 +1,28 @@
 //
-//  ListTableViewController.swift
-//  Pinz App
+//  DetailsTableViewController.swift
+//  
 //
-//  Created by Matt Hickman on 6/18/18.
-//  Copyright © 2018 Matt Hickman. All rights reserved.
+//  Created by Matt Hickman on 6/23/18.
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
 
-class ListTableViewController: UITableViewController {
+class DetailsTableViewController: UITableViewController {
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
     
-    let rootReference = Database.database().reference()
-    
-    var pinz : [Pin] = [Pin(title: "One", description: "Lit", location: Location(lattitude: 123.23, longitude: 123.12)), Pin(title: "Two", description: "Lit", location: Location(lattitude: 123.23, longitude: 123.12)), Pin(title: "Three", description: "Lit", location: Location(lattitude: 123.23, longitude: 123.12)), Pin(title: "Four", description: "Lit", location: Location(lattitude: 123.23, longitude: 123.12))]
-    
+    var pin: Pin?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let pin = pin {
+            titleTextField.text = pin.title
+            descriptionTextField.text = pin.description
+            locationTextField.text = "Not close"
+            self.title = "Edit Pin"
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,40 +33,18 @@ class ListTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return pinz.count
-        } else {
-            return 0
-        }
-    }
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PinCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let pin = pinz[indexPath.row]
-        
-        cell.textLabel?.text = pin.title
-        cell.detailTextLabel?.text = pin.description
+        // Configure the cell...
 
         return cell
     }
+    */
 
-    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let pin = pinz[indexPath.row]
-        print(pin.title)
-        self.performSegue(withIdentifier: "toDetails", sender: self)
-    }*/
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -97,19 +80,14 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "EditPin" {
-            let indexPath = tableView.indexPathForSelectedRow!
-            let pin = pinz[indexPath.row]
-            let detailsVC = segue.destination.childViewControllers.first as! DetailsTableViewController
-            detailsVC.pin = pin
-        }
     }
+    */
 
 }

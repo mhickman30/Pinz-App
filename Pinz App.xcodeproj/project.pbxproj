@@ -11,6 +11,7 @@
 		41147ACC20D8BE8900F9C111 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41147ACB20D8BE8900F9C111 /* ListTableViewController.swift */; };
 		411591E820DC53C80038A33B /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411591E720DC53C80038A33B /* Pin.swift */; };
 		411591EB20DC54030038A33B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411591EA20DC54030038A33B /* Location.swift */; };
+		41175D3B20DED6E600310E8F /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41175D3A20DED6E600310E8F /* DetailsTableViewController.swift */; };
 		4182244720D6CAE500B3B0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244620D6CAE500B3B0F6 /* AppDelegate.swift */; };
 		4182244920D6CAE500B3B0F6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4182244820D6CAE500B3B0F6 /* LogInViewController.swift */; };
 		4182244C20D6CAE500B3B0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4182244A20D6CAE500B3B0F6 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		41147ACB20D8BE8900F9C111 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		411591E720DC53C80038A33B /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		411591EA20DC54030038A33B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		41175D3A20DED6E600310E8F /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailsTableViewController.swift; path = "/Users/matthickman/Desktop/Pinz App/Pinz App/View Controllers/DetailsTableViewController.swift"; sourceTree = "<absolute>"; };
 		4182244320D6CAE500B3B0F6 /* Pinz App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinz App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4182244620D6CAE500B3B0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4182244820D6CAE500B3B0F6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		41147ACA20D8B48B00F9C111 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				41175D3A20DED6E600310E8F /* DetailsTableViewController.swift */,
 				41147ACB20D8BE8900F9C111 /* ListTableViewController.swift */,
 				4182244820D6CAE500B3B0F6 /* LogInViewController.swift */,
 				41147AC820D8B48200F9C111 /* MapViewController.swift */,
@@ -264,6 +267,7 @@
 				41147AC920D8B48200F9C111 /* MapViewController.swift in Sources */,
 				4182244720D6CAE500B3B0F6 /* AppDelegate.swift in Sources */,
 				411591EB20DC54030038A33B /* Location.swift in Sources */,
+				41175D3B20DED6E600310E8F /* DetailsTableViewController.swift in Sources */,
 				41147ACC20D8BE8900F9C111 /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
