@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class LogInViewController: UIViewController {
 
@@ -44,34 +45,33 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        
         if let email = emailTextField.text, let password = passwordTextField.text {
             if isSignIn {
                 // Sign in user with Firebase
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                    // Check that user is not nil
-                    if let authUser = user {
-                        // user is found go to home screen
+                    // Check to see if an error was returned or the user wasn't created
+                    if error == nil && user != nil {
                         self.errorLabel.isHidden = true
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     } else {
-                        // Check error and show message
                         self.errorLabel.isHidden = false
                         self.errorLabel.text = error!.localizedDescription
-                           print("Error signing in user: \(error!.localizedDescription)")
+                        print("Error signing in user: \(error!.localizedDescription)")
                     }
                 }
             } else {
                 // Register user with Firebase
                 Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-                    
-                    // Check that user is not nil
-                    if let authUser = user {
-                        // User is found go to home screen
+                    if error == nil && user != nil {
+                        // Set account info in database upon creation of user
+                        guard let uid = Auth.auth().currentUser?.uid else {return}
+                        let storageRef = Database.database().reference().child("users/\(uid)")
+                        storageRef.setValue(["email" : email, "password" : password, "pinz" : ["pin1" : "test"]])
+                        
+                        
                         self.errorLabel.isHidden = true
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     } else {
-                        // Check error and show message
                         self.errorLabel.isHidden = false
                         self.errorLabel.text = error!.localizedDescription
                         print("Error creating user: \(error!.localizedDescription)")

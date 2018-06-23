@@ -8,13 +8,14 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //savePin()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +25,7 @@ class MapViewController: UIViewController {
     
     override func loadView() {
         // Create a GMSCameraPosition
-        let camera = GMSCameraPosition.camera(withLatitude: 45.5122, longitude: -122.6587, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 45.5122, longitude: -122.6587, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
@@ -36,6 +37,11 @@ class MapViewController: UIViewController {
         marker.map = mapView
     }
     
+    func savePin() {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let storageReference = Database.database().reference().child("users/\(uid)")
+        storageReference.setValue(["username": "test"])
+    }
 
     /*
     // MARK: - Navigation
